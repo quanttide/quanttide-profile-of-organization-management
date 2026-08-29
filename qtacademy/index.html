@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>量潮实训基地 | 课堂·众包·招聘 统一管理</title>
+    <meta name="description" content="量潮实训基地统一管理课堂、众包、招聘的参与者，是量潮科技人才培养与业务交付的枢纽。">
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --blue: #2563eb;
+            --blue-dark: #1d4ed8;
+            --text: #111827;
+            --text-2: #374151;
+            --text-3: #6b7280;
+            --bg: #fff;
+            --bg-2: #f9fafb;
+            --border: #e5e7eb;
+            --font: -apple-system, BlinkMacSystemFont, "Noto Sans SC", sans-serif;
+            --radius: 10px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Nav */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255,255,255,0.96);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 56px;
+        }
+
+        .nav-logo {
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--text);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            color: var(--text-3);
+            font-weight: 500;
+        }
+
+        .nav-links a:hover { color: var(--text); }
+
+        /* Hero */
+        .hero {
+            padding: 100px 0 60px;
+            text-align: center;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: var(--bg-2);
+            border: 1px solid var(--border);
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-3);
+            padding: 5px 14px;
+            border-radius: 100px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 40px;
+            font-weight: 800;
+            line-height: 1.25;
+            margin-bottom: 16px;
+            letter-spacing: -0.01em;
+        }
+
+        .hero-sub {
+            font-size: 18px;
+            color: var(--text-2);
+            max-width: 560px;
+            margin: 0 auto 40px;
+        }
+
+        /* Section */
+        .section {
+            padding: 64px 0;
+        }
+
+        .section-alt {
+            background: var(--bg-2);
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .section-desc {
+            color: var(--text-3);
+            margin-bottom: 40px;
+        }
+
+        /* Three pillars */
+        .pillars {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .pillar {
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px 24px;
+            background: var(--bg);
+        }
+
+        .pillar-tag {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 100px;
+            margin-bottom: 14px;
+        }
+
+        .pillar-class .pillar-tag {
+            background: #dbeafe;
+            color: #1d4ed8;
+        }
+
+        .pillar-crowd .pillar-tag {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .pillar-hire .pillar-tag {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .pillar h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .pillar p {
+            font-size: 14px;
+            color: var(--text-3);
+            margin-bottom: 16px;
+        }
+
+        .pillar-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .pillar-list li {
+            font-size: 13px;
+            color: var(--text-2);
+            padding: 6px 0;
+            border-top: 1px solid var(--border);
+        }
+
+        /* How it works */
+        .how-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .how-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px;
+        }
+
+        .how-card h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .how-card p {
+            font-size: 14px;
+            color: var(--text-3);
+            margin-bottom: 12px;
+        }
+
+        .how-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .how-card li {
+            font-size: 14px;
+            color: var(--text-2);
+            padding: 6px 0;
+            padding-left: 16px;
+            position: relative;
+        }
+
+        .how-card li::before {
+            content: '·';
+            position: absolute;
+            left: 0;
+            font-weight: 700;
+            color: var(--blue);
+        }
+
+        /* Flow */
+        .flow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 32px 0;
+        }
+
+        .flow-box {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 14px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: center;
+            min-width: 100px;
+        }
+
+        .flow-arrow {
+            color: var(--text-3);
+            font-size: 18px;
+        }
+
+        /* Roles */
+        .roles {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .role {
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            text-align: center;
+        }
+
+        .role h3 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .role p {
+            font-size: 13px;
+            color: var(--text-3);
+        }
+
+        /* Contact */
+        .contact {
+            text-align: center;
+            padding: 64px 0;
+            background: var(--text);
+            color: #fff;
+        }
+
+        .contact h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .contact p {
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 24px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            font-size: 14px;
+        }
+
+        .contact-links a {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .contact-links a:hover { color: #fff; }
+
+        /* Footer */
+        .footer {
+            border-top: 1px solid var(--border);
+            padding: 24px 0;
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-3);
+        }
+
+        .footer a {
+            color: var(--text-3);
+            margin: 0 8px;
+        }
+
+        .footer a:hover { color: var(--text); }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            h1 { font-size: 28px; }
+            .hero-sub { font-size: 16px; }
+            .pillars,
+            .roles { grid-template-columns: 1fr; }
+            .how-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="container nav-inner">
+            <span class="nav-logo">量潮实训基地</span>
+            <div class="nav-links">
+                <a href="#pillars">三大业务</a>
+                <a href="#how">运作机制</a>
+                <a href="#roles">参与角色</a>
+                <a href="#contact">联系我们</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-tag">量潮科技 · 人才培养枢纽</div>
+            <h1>课堂 · 众包 · 招聘<br>统一管理</h1>
+            <p class="hero-sub">
+                实训基地是量潮科技统一管理课堂学员、众包任务参与者、招聘候选人的枢纽平台，串联人才培养与业务交付。
+            </p>
+        </div>
+    </section>
+
+    <section class="section" id="pillars">
+        <div class="container">
+            <h2 class="section-title">参与者等级</h2>
+            <p class="section-desc">参与者按能力递进，从课时作业到自主选题</p>
+            <div class="pillars">
+                <div class="pillar pillar-class">
+                    <span class="pillar-tag">初级</span>
+                    <h3>课堂学员</h3>
+                    <p>参与量潮课堂课程，完成明确的课时作业</p>
+                    <ul class="pillar-list">
+                        <li>课程报名与注册</li>
+                        <li>完成课时作业</li>
+                        <li>学习进度跟踪</li>
+                        <li>可升级为实训学员</li>
+                    </ul>
+                </div>
+                <div class="pillar pillar-crowd">
+                    <span class="pillar-tag">中级</span>
+                    <h3>实训学员</h3>
+                    <p>承接基地分配的实训题目，在真实业务中训练</p>
+                    <ul class="pillar-list">
+                        <li>承接分配的实训题目</li>
+                        <li>跨部门组队协作</li>
+                        <li>产出验收与点评</li>
+                        <li>可升级为招聘候选人</li>
+                    </ul>
+                </div>
+                <div class="pillar pillar-hire">
+                    <span class="pillar-tag">高级</span>
+                    <h3>招聘候选人</h3>
+                    <p>自主选题，展示独立发现问题和解决问题的能力</p>
+                    <ul class="pillar-list">
+                        <li>自主发现并定义问题</li>
+                        <li>课题申请与评审</li>
+                        <li>逐轮点评迭代</li>
+                        <li>通过后转正入职</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="how">
+        <div class="container">
+            <h2 class="section-title">运作机制</h2>
+            <p class="section-desc">参与者从课堂学员起步，逐步升级，最终通过招聘转正</p>
+            <div class="flow">
+                <div class="flow-box">课堂学员<br><small style="color:var(--text-3)">课时作业</small></div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-box">实训学员<br><small style="color:var(--text-3)">分配题目</small></div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-box">招聘候选人<br><small style="color:var(--text-3)">自主选题</small></div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-box">转正入职</div>
+            </div>
+            <div class="how-grid">
+                <div class="how-card">
+                    <h3>📋 选题制考核</h3>
+                    <p>固定笔试题已淘汰，采用选题制：</p>
+                    <ul>
+                        <li>自主发现问题或认领任务</li>
+                        <li>课题申请，逐轮点评迭代</li>
+                        <li>实际产出验收</li>
+                        <li>沟通能力纳入考核</li>
+                    </ul>
+                </div>
+                <div class="how-card">
+                    <h3>🏢 内包子公司模式</h3>
+                    <p>参与者按职能部门编组，承接公司业务：</p>
+                    <ul>
+                        <li>技术部：研发与数据交付</li>
+                        <li>产品部：需求与设计</li>
+                        <li>市场部：增长与推广</li>
+                        <li>职能部：行政人事财务</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="roles">
+        <div class="container">
+            <h2 class="section-title">参与角色</h2>
+            <p class="section-desc">从课堂学员到招聘候选人，能力递进，逐步成长</p>
+            <div class="roles">
+                <div class="role">
+                    <h3>🎓 课堂学员</h3>
+                    <p>参与课程，完成课时作业，打基础</p>
+                </div>
+                <div class="role">
+                    <h3>📦 实训学员</h3>
+                    <p>承接分配题目，在真实业务中训练</p>
+                </div>
+                <div class="role">
+                    <h3>💼 招聘候选人</h3>
+                    <p>自主选题，展示独立能力，争取转正</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>联系我们</h2>
+            <p>了解实训基地业务合作、课程合作等事宜</p>
+            <div class="contact-links">
+                <a href="https://quanttide.com">量潮官网</a>
+                <a href="https://github.com/quanttide">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 量潮科技 Quanttide</p>
+        </div>
+    </footer>
+
+</body>
+</html>
