@@ -25,5 +25,5 @@
 
 ## 关联
 
-- 制度框架：qtacademy/institution.md（文化的规则化表达）
+- 制度框架：qtacademy/institution/（文化的规则化表达）
 - 组织结构：qtacademy/structure.md（内包子公司模式）
