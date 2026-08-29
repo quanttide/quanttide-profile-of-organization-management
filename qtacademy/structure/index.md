@@ -28,6 +28,6 @@
 
 ## 关联
 
-- 公司组织：qttech/structure.md（发包方的事业部与秘书处体系）
+- 公司组织：qttech/structure/（发包方的事业部与秘书处体系）
 - 路线图：roadmap qtclass/qtrecurit 的 training-base.md（双路径与训练机制）
 - 组织云：domains/quanttide-org/data/intention/index.md（组织数据唯一权威源）

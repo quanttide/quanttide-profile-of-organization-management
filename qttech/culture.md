@@ -23,5 +23,5 @@
 
 ## 关联
 
-- 制度体系：qttech/institution.md（文化的规则化表达）
+- 制度体系：qttech/institution/（文化的规则化表达）
 - 品牌叙事：default/quanttide-tech/data/profile/brand（对外的文化表达）
