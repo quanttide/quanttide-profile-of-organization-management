@@ -9,7 +9,7 @@
 ```
 <org-name>/
 ├── index.md        # 组织档案：定位、核心目标、组织形态（随组织发展扩充）
-└── structure.md    # 组织结构：部门设置与架构（可选，当前有 qttech、qtalliance）
+└── structure.md    # 组织结构：部门设置与架构（可选，当前有 qtacademy、qttech、qtalliance）
 ```
 
 ## 组织名单（目前已确定）
