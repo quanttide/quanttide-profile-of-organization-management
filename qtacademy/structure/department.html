@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>量潮实训基地 - 部门设置</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #f9fafb;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #1a1a1a;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        h2 {
+            font-size: 1.5rem;
+            color: #374151;
+            margin: 2rem 0 1rem 0;
+            padding-bottom: 0.25rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        h3 {
+            font-size: 1.25rem;
+            color: #4b5563;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+        p {
+            margin-bottom: 1rem;
+            color: #6b7280;
+        }
+        ul {
+            list-style: none;
+            margin-bottom: 1rem;
+        }
+        ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #4b5563;
+        }
+        ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #6366f1;
+            font-weight: bold;
+        }
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .section-icon {
+            width: 2rem;
+            height: 2rem;
+            background: #6366f1;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.75rem;
+            color: white;
+            font-size: 1rem;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            color: #374151;
+        }
+        .department-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+        }
+        .department-card h3 {
+            color: #1e293b;
+            margin: 0 0 0.75rem 0;
+        }
+        .department-card ul {
+            margin-bottom: 0;
+        }
+        .relations {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 6px;
+            padding: 1.25rem;
+            margin-top: 2rem;
+        }
+        .relations h3 {
+            color: #166534;
+            margin: 0 0 0.75rem 0;
+        }
+        .relations a {
+            color: #16a34a;
+            text-decoration: none;
+        }
+        .relations a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>量潮实训基地 - 部门设置</h1>
+    
+    <div class="section">
+        <p>实训基地按职能部门编组，学员编制在部门，部门是能力训练线与人员归属。承接内包任务时跨部门抽人组队，项目按任务需要从各部门抽人，任务结束回部门。</p>
+    </div>
+
+    <div class="section">
+        <div class="section-header">
+            <div class="section-icon">🏢</div>
+            <div class="section-title">业务部门</div>
+        </div>
+
+        <div class="department-card">
+            <h3>技术部</h3>
+            <ul>
+                <li><strong>职能</strong>：研发与数据交付类任务</li>
+                <li><strong>对应公司能力</strong>：技术/数据交付能力</li>
+                <li><strong>典型任务</strong>：开发、测试、数据分析、基础设施维护</li>
+            </ul>
+        </div>
+
+        <div class="department-card">
+            <h3>产品部</h3>
+            <ul>
+                <li><strong>职能</strong>：需求、设计、规格类任务</li>
+                <li><strong>对应公司能力</strong>：产品设计与规划</li>
+                <li><strong>典型任务</strong>：需求分析、产品设计、用户研究、规格编写</li>
+            </ul>
+        </div>
+
+        <div class="department-card">
+            <h3>市场部</h3>
+            <ul>
+                <li><strong>职能</strong>：增长、课程推广、招聘导流类任务</li>
+                <li><strong>对应公司能力</strong>：市场与增长</li>
+                <li><strong>典型任务</strong>：内容运营、推广执行、招聘逆向导流</li>
+            </ul>
+        </div>
+
+        <div class="department-card">
+            <h3>职能部</h3>
+            <ul>
+                <li><strong>职能</strong>：基地自身的行政人事财务支持</li>
+                <li><strong>配置</strong>：最简配置，直接使用公司共享中心能力</li>
+                <li><strong>典型任务</strong>：行政协调、财务记账、人事对接</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">
+            <div class="section-icon">🏛️</div>
+            <div class="section-title">管理机构</div>
+        </div>
+
+        <div class="department-card">
+            <h3>秘书处</h3>
+            <p>由公司派驻代表组成，负责基地治理：</p>
+            <ul>
+                <li>治理与制度执行</li>
+                <li>训练与考核的组织</li>
+                <li>内包任务的承接对接</li>
+                <li>考核评审与转正评审</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="relations">
+        <h3>关联</h3>
+        <ul>
+            <li>组织结构概览：<a href="index.html">qtacademy/structure/index.md</a></li>
+            <li>职级体系：<a href="../institution/rank.html">qtacademy/institution/rank.md</a></li>
+        </ul>
+    </div>
+</body>
+</html>
