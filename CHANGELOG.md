@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased]
+## [v0.1.0] - 2025-08-29
 
 ### Added
 - 组织与人物档案体系：orgs/（qttech/qthold/qtalliance/qtfounder/qtinstitute/qtacademy）+ people/（9 位核心人物一人一档）
