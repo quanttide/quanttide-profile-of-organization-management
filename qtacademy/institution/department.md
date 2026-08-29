@@ -41,5 +41,5 @@
 
 ## 关联
 
-- 组织结构详情：qtacademy/structure.md
+- 组织结构详情：qtacademy/structure/
 - 职级体系：qtacademy/institution/rank.md
