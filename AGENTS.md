@@ -2,22 +2,28 @@
 
 ## 概览
 
-量潮组织管理档案，记录组织管理相关产品的产品级思考与需求地图。参考 quanttide-product/data/profile 的建设思路。
+量潮组织管理档案，记录组织与人物的档案。参考 quanttide-product/data/profile 的建设思路。
 
-## 目录结构
-
-每个产品一个目录，目录名与领域仓库 `apps/` 或 `packages/` 中的子模块名保持一致：
+## 目录结构：组织与人物两组
 
 ```
-<product-name>/
-├── index.md        # 产品档案：产品级思考
-├── requirement.md  # 需求档案：用户故事地图
-└── evaluation.md   # 评估档案：业务目标验证（可选）
+profile/
+├── orgs/               # 组织组：一个文件夹一个组织
+│   └── <org-name>/     #   目录名与领域仓库 apps/ 子模块名对应
+│       ├── index.md        # 组织档案：定位、核心目标、组织形态
+│       ├── structure/      # 组织结构（可选）：index.md + department.md + title.md
+│       ├── institution/    # 制度文档（可选）：index.md + 专项制度
+│       └── culture.md      # 文化文档（可选）
+└── people/             # 人物组：一个文件夹一个人物
+    └── <person-id>/    #   目录名 = 人物 ID（拼音 slug，对应站点 /people/<id>）
+        └── index.md        # 人物档案：职务表、角色定位
 ```
 
 ## 约定
 
 - 档案随迭代更新，反映当前理解，不追求一次写全
+- 人物是一等实体：跨组织职务在人物档案职务表中逐条列出；职务的单一事实源在各组织 title.md
+- 目录先于详档：新组织/新人物确定即建目录与 index.md
 
 ## 信息披露规则
 

@@ -51,4 +51,5 @@
 
 ## 组织档案
 
-见 README.md 组织名单——各组织一个文件夹：index.md（是什么）/ structure.md（怎么架构）/ institution.md（依什么规则）/ culture.md（什么气质）。
+- 组织：orgs/ 下各组织一个文件夹——index.md（是什么）/ structure.md（怎么架构）/ institution.md（依什么规则）/ culture.md（什么气质），名单见 README.md
+- 人物：people/ 下各人物一个文件夹——人物是一等实体，跨组织职务逐条列出，见 people/index.md
