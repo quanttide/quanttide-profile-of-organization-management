@@ -119,10 +119,186 @@
         .relations a:hover {
             text-decoration: underline;
         }
+        /* 组织结构树样式 */
+        .org-tree {
+            padding: 2rem 0;
+            overflow-x: auto;
+        }
+        .org-tree ul {
+            padding-top: 20px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+        }
+        .org-tree li {
+            float: none;
+            text-align: center;
+            list-style-type: none;
+            position: relative;
+            padding: 20px 5px 0 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .org-tree li::before, .org-tree li::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 50%;
+            border-top: 2px solid #94a3b8;
+            width: 50%;
+            height: 20px;
+        }
+        .org-tree li::after {
+            right: auto;
+            left: 50%;
+            border-left: 2px solid #94a3b8;
+        }
+        .org-tree li:only-child::after, .org-tree li:only-child::before {
+            display: none;
+        }
+        .org-tree li:only-child {
+            padding-top: 0;
+        }
+        .org-tree li:first-child::before, .org-tree li:last-child::after {
+            border: 0 none;
+        }
+        .org-tree li:last-child::before {
+            border-right: 2px solid #94a3b8;
+            border-radius: 0 5px 0 0;
+        }
+        .org-tree li:first-child::after {
+            border-radius: 5px 0 0 0;
+        }
+        .org-tree ul ul::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            border-left: 2px solid #94a3b8;
+            width: 0;
+            height: 20px;
+        }
+        .org-node {
+            border: 2px solid #6366f1;
+            border-radius: 8px;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #1e293b;
+            background: white;
+            display: inline-block;
+            min-width: 100px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .org-node:hover {
+            background: #6366f1;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .org-node.root {
+            background: #1e293b;
+            color: white;
+            font-weight: bold;
+            min-width: 120px;
+        }
+        .org-node.business {
+            border-color: #2563eb;
+            background: #eff6ff;
+        }
+        .org-node.business:hover {
+            background: #2563eb;
+        }
+        .org-node.support {
+            border-color: #059669;
+            background: #ecfdf5;
+        }
+        .org-node.support:hover {
+            background: #059669;
+        }
+        .org-node.admin {
+            border-color: #7c3aed;
+            background: #f5f3ff;
+        }
+        .org-node.admin:hover {
+            background: #7c3aed;
+        }
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+            padding: 1rem;
+            background: #f8fafc;
+            border-radius: 6px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+        }
+        .legend-color {
+            width: 1rem;
+            height: 1rem;
+            border-radius: 4px;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body>
     <h1>量潮实训基地 - 部门设置</h1>
+
+    <!-- 组织结构树 -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-icon">🌳</div>
+            <div class="section-title">组织结构树</div>
+        </div>
+        
+        <div class="org-tree">
+            <ul>
+                <li>
+                    <div class="org-node root">量潮实训基地</div>
+                    <ul>
+                        <li>
+                            <div class="org-node business">技术部</div>
+                        </li>
+                        <li>
+                            <div class="org-node business">产品部</div>
+                        </li>
+                        <li>
+                            <div class="org-node business">市场部</div>
+                        </li>
+                        <li>
+                            <div class="org-node support">综合部</div>
+                        </li>
+                        <li>
+                            <div class="org-node admin">秘书处</div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background: #2563eb;"></div>
+                <span>业务部门</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #059669;"></div>
+                <span>支撑部门</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #7c3aed;"></div>
+                <span>管理机构</span>
+            </div>
+        </div>
+    </div>
     
     <div class="section">
         <p>实训基地按职能部门编组，学员编制在部门，部门是能力训练线与人员归属。承接内包任务时跨部门抽人组队，项目按任务需要从各部门抽人，任务结束回部门。</p>
@@ -159,6 +335,13 @@
                 <li><strong>对应公司能力</strong>：市场与增长</li>
                 <li><strong>典型任务</strong>：内容运营、推广执行、招聘逆向导流</li>
             </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">
+            <div class="section-icon">🔧</div>
+            <div class="section-title">支撑部门</div>
         </div>
 
         <div class="department-card">
