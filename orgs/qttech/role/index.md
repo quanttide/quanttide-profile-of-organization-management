@@ -5,8 +5,8 @@
 ## 结构
 
 ```text
-position/
-└── <position-id>.md     # 岗位说明书（英文 slug，如 secretary-general.md）
+role/
+└── <role-id>.md     # 岗位说明书（英文 slug，如 secretary-general.md）
 ```
 
 ## 岗位清单
