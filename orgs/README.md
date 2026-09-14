@@ -22,5 +22,5 @@ orgs/
 ## 约定
 
 - 目录名即组织 ID（如 qttech、qtalliance、qtacademy）
-- 每个组织包含：index.md（定位）、structure/（结构）、institution/（制度）、culture.md（文化）
+- 每个组织包含：index.md（定位）、structure/（结构）、institution/（制度）、culture.md（文化）；岗位档案按需增补 position/（岗位说明书）
 - 职务的单一事实源在各组织的 `title.md`（orgs/*/title.md 或 orgs/*/structure/title.md）
