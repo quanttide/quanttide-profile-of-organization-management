@@ -11,7 +11,7 @@ role/
 
 ## 岗位清单
 
-现有岗位为秘书长，说明书见 `secretary-general.md`，依据《量潮科技公司秘书章程》。
+现有岗位为秘书长，说明书见 `secretary-general.md`，依据《量潮公司秘书章程》。
 
 ## 约定
 
