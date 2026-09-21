@@ -23,4 +23,4 @@
 
 - 人物档案：people/zhangguo/
 - 组织档案：orgs/qttech/、orgs/qtalliance/
-- 学术呼应：量潮学术（qtacademics）——研究产生数据需求、数据服务支撑研究
+- 学术呼应：量潮学术（qtresearch）——研究产生数据需求、数据服务支撑研究

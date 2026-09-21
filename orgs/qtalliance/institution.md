@@ -13,7 +13,7 @@
 **成员关系约定**（源自联盟定位）：
 
 - 盟友经量潮介绍即被验证——收录与背书是制度行为，不是随意推荐
-- 可见性链条衔接：盟友收录与 qtopen/qtproduct/qtbusiness/qtacademics 的展示体系互通
+- 可见性链条衔接：盟友收录与 qtopen/qtproduct/qtbusiness/qtresearch 的展示体系互通
 
 ## 待立制度（章程立项时补齐）
 

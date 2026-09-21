@@ -2,7 +2,7 @@
 
 ## 定位：盟友生态的组织载体
 
-量潮创新联盟（qtalliance）是量潮盟友的展示平台与组织载体：联盟官网介绍量潮的盟友们——合作方、开发者朋友、学者朋友、执行方等生态成员在此被介绍、被看见。被量潮介绍即被验证，联盟是盟友的信用徽章。可见性系列的收官一环：代码（qtopen）→ 产品（qtproduct）→ 服务（qtbusiness）→ 研究（qtacademics）→ 盟友（qtalliance）。
+量潮创新联盟（qtalliance）是量潮盟友的展示平台与组织载体：联盟官网介绍量潮的盟友们——合作方、开发者朋友、学者朋友、执行方等生态成员在此被介绍、被看见。被量潮介绍即被验证，联盟是盟友的信用徽章。可见性系列的收官一环：代码（qtopen）→ 产品（qtproduct）→ 服务（qtbusiness）→ 研究（qtresearch）→ 盟友（qtalliance）。
 
 ## 核心目标：让盟友被看见
 
@@ -17,4 +17,4 @@
 ## 关联
 
 - 联盟管理领域（domains/quanttide-alliance）：联盟实践的方法与过程
-- 可见性系列：qtopen / qtproduct / qtbusiness / qtacademics，盟友是收官一环
+- 可见性系列：qtopen / qtproduct / qtbusiness / qtresearch，盟友是收官一环
