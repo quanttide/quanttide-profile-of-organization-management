@@ -1,6 +1,6 @@
 # 量潮科技制度
 
-量潮科技（qttech）的制度体系概览——制度全文见章程仓库（assets/quanttide-bylaw/default/company），本文档是组织档案视角的制度地图。
+量潮科技（qttech）的制度体系概览——制度全文见章程仓库（categories/quanttide-bylaw/default/company），本文档是组织档案视角的制度地图。
 
 ## 制度体系
 

@@ -29,6 +29,6 @@
 
 ## 关联
 
-- 章程：`assets/quanttide-bylaw/default/company`（秘书章程、议事机构章程、职级章程、公司代表章程）
+- 章程：`categories/quanttide-bylaw/default/company`（秘书章程、议事机构章程、职级章程、公司代表章程）
 - 意图：`default/quanttide-tech/data/intention/qtdata/product.md`（事业部制）、`qtadmin/index.md`（秘书处管理视角）
 - 组织云：`domains/quanttide-org/data/intention/index.md`（组织数据仓库设计）
